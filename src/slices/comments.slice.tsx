@@ -14,6 +14,11 @@ const commentsSlice = createSlice({
     setComments(state, action){
         state.list = action.payload
     },
+    createComment(state, action){
+      let newList = state.list 
+      newList.unshift(action.payload)
+      state.list = newList
+    },
     updateComment(state, action){
       let id = action.payload.id
       let index = state.list.findIndex((obj) => obj.id === id);
@@ -39,5 +44,5 @@ const commentsSlice = createSlice({
   },
 })
 
-export const { setComments, updateComment, deleteComment} = commentsSlice.actions
+export const { setComments, createComment, updateComment, deleteComment} = commentsSlice.actions
 export default commentsSlice.reducer
