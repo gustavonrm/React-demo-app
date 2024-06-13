@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Main from './layouts/Main';
+import PostsPage from './pages/PostsPage';
+import CommentsPage from './pages/CommentsPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Main />}>
+        <Route path="posts" element={<PostsPage />}/>
+        <Route path="comments" element={<CommentsPage />}>
+          <Route path=":postId" element={<CommentsPage />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: '1rem' }}>
+              <p>There&#8216;s nothing here!</p>
+            </main>
+          }
+        />
+      </Route>
+    </Routes>
   );
 }
 
