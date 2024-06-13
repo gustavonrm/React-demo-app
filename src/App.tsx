@@ -3,11 +3,13 @@ import { Routes, Route } from 'react-router-dom';
 import Main from './layouts/Main';
 import PostsPage from './pages/PostsPage';
 import CommentsPage from './pages/CommentsPage';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />}>
+        <Route path="/" element={<HomePage/>}/>
         <Route path="posts" element={<PostsPage />}/>
         <Route path="comments" element={<CommentsPage />}>
           <Route path=":postId" element={<CommentsPage />} />

@@ -11,10 +11,11 @@ function CommentForm({postId}: {postId: any}) {
         <div className="card mb-3">
         <div className="card-body">
             <h5 className="card-title">
-                <input className="form-control" type="text"  value={commentPayload.name} placeholder='type comment title' onChange={(e) => setCommentPayload({...commentPayload, name: e.target.value})}/>
+                Create a Comment
             </h5>
+            <input className="form-control mb-3" type="text"  value={commentPayload.name} placeholder='type comment title' onChange={(e) => setCommentPayload({...commentPayload, name: e.target.value})}/>
             <textarea className="form-control" rows={3} value={commentPayload.body} placeholder='type comment body'onChange={(e) => setCommentPayload({...commentPayload, body: e.target.value})}/>
-            <button type="button" className="btn btn-success mt-3" onClick={() => createComment(commentPayload)}>Submit</button>
+            <button type="button" className="btn btn-success mt-3" onClick={() => createComment(commentPayload)}>Post Comment Submit</button>
             </div>        
         </div>
         )
