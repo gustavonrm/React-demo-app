@@ -6,6 +6,7 @@ To run this project after git clone, please open the root on a terminal and run:
 
 ### `yarn install`
 ### `yarn start`
+#### Please check recorded if needed: video-demo.mov
 
 ## Available Scripts
 
