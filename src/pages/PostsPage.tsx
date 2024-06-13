@@ -3,7 +3,6 @@ import Post from "../components/Post";
 import { PostProps } from "../types";
 import List from "../components/List";
 
-
 function PostsPage() {
     const { data, error, isLoading } = useGetPostsQuery()
 

@@ -34,7 +34,7 @@ const CommentsPage: React.FC = () => {
     <div>
       <CommentForm postId={postId}/>
       <h4>
-        Comment List
+      {postId ? 'Listing Post - '+postId+ ' comments' : 'Listing all comments'}
       </h4>
       <List data={comments} renderData={renderData}/>
     </div>

@@ -1,8 +1,3 @@
-import { useGetPostsQuery } from "../services/post.api";
-import Post from "../components/Post";
-import { PostProps } from "../types";
-
-
 function HomePage() {
     return( 
     <div>

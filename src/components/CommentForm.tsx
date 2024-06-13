@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { CommentProps, } from '../types'
+import { useState } from 'react';
 import { useCreateCommentMutation } from '../services/post.api';
 
 function CommentForm({postId}: {postId: any}) {
